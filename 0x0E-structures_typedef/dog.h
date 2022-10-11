@@ -1,3 +1,4 @@
+struct dog;
 /**
  * struct my_struct - Short description
  * @*name: First member
