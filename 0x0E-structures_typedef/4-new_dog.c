@@ -54,12 +54,12 @@ char *_strcpy(char *dest, char *src)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new;
+	int len1 = _strlen(name);
+	int len2 = _strlen(owner);
 
 	new = malloc(sizeof(dog_t));
 	if (new == NULL)
 		return (NULL);
-	int len1 = _strlen(name);
-	int len2 = _strlen(owner);
 
 	new->name = malloc(sizeof(char) * (len1 + 1));
 
