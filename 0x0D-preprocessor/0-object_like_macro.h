@@ -1,6 +1,3 @@
-#ifndef __MACRO__
-#define __MACRO__
-
+#ifndef SIZE
 #define SIZE 1024
-
 #endif
