@@ -29,6 +29,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	w = write(STDIN_FILENO, text, let);
 
-	close(fd);
+	close(file);
 	return (w);
 }
