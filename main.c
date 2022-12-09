@@ -1,13 +1,25 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+/* more headers goes there */
 
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: Always 0
  */
 int main(void)
 {
-    printf("Sizeof char is %ld bytes\n",sizeof(char));
-    printf("Sizeof int is %ld bytes\n",sizeof(int));
-    return (1);
+int i = 0;
+
+while (i <= 15)
+{
+if (i < 10)
+putchar(i + '0');
+else
+putchar(i - 10 + 'a');
+i++;
+}
+putchar('\n');
+return (0);
 }
