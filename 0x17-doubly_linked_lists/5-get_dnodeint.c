@@ -1,26 +1,25 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
 
 /**
-* *get_dnodeint_at_index - that prints all the elements of a dlistint_t list
-* @head: variable pointer
-* @index: index int
-* Return: the nth node of a dlistint_t linked list.
-*/
-
+ * get_dnodeint_at_index - returns the nth node of a dlistint_t linked list.
+ * @head: The head of the list
+ * @index: The node index
+ *
+ * Return: node at the index, NULL if not found
+ */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	unsigned int x = 0;
-	dlistint_t *i;
+	dlistint_t *node = NULL;
+	unsigned int idx = 0;
 
-	for (i = head; i != NULL; i = i->next)
+	if (head == NULL)
+		return (NULL);
+
+	node = head;
+	while (node != NULL && idx != index)
 	{
-		if (x == index)
-			return (i);
-		x++;
+		idx++;
+		node = node->next;
 	}
-
-	return (NULL);
+	return (node);
 }
-
